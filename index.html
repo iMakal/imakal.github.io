@@ -4,36 +4,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portfólio</title>
+  <title>Miguel Marques - Portfólio </title>
   <link rel="stylesheet" href="website.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <header id="titulo" class="slide-in-top">
   <div class="intro">
     <div class="texto">
-      <h1>Olá, eu sou o Miguel</h1>
-      <p>Licenciado em engenharia informática, com gosto em programação</p>
+      <h1>👋🙂 Olá, tudo bem? Eu sou o Miguel</h1>
+      <p>Licenciado em engenharia informática</p>
     </div>
     <img src="iconaa.png" alt="Ícone" class="foto">
+    <button onclick="myFunction(this)" id="darkModeToggle"> </button>
+
   </div>
+
+
+
 </header>
 
-<div id="sobremim" class="fade-in">
-  <h2>Sobre mim</h2>
-  <p>Email: miguelpmarques2602@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/iMakal" target="_blank">IMakal</a></p>
-</div>
 
-<section id="projetos" class="fade-in">
-  <h2>Projetos</h2>
-  <p>🤖 <a href="botdiscord.html" target="_blank">Makal.exe : Bot para Discord utilizando Python com discord.py</a></p>
+
+<div class="duas-colunas fade-in">
+<section id="sobremim">
+  <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Sobre mim</h2>
+  <p>Chamo-me Miguel Marques, licenciado em engenharia informatica, curso tirado no Politecnico de Viseu na Escola Superior de Gestão e Tecnologia de Viseu entre 2021 até 2024.</p>
+  <p>Tenho gosto por tecnologia, informática, programação, jogos e arte.</p>
+  <p>Pretendo aprender mais sobre linguas de programação e criar projetos a parte para divertir-me enquanto melhoro as minhas habilidades técnicas.</p>
+  
 </section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+  <p>🤖 <a href="botdiscord.html" target="_self">Makal.exe : Bot para Discord utilizando Python com discord.py</a></p>
+</section>
+</div>
 
 <div id="contactos" class="fade-in">
   <h2>Contactos</h2>
   <p>Email: miguelpmarques2602@gmail.com</p>
   <p>GitHub: <a href="https://github.com/iMakal" target="_blank">IMakal</a></p>
 </div>
+
+<footer>
+  <p>Criado por Miguel Marques. Publicado com GitHub.</p>
+</footer>
+
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgExpandida">
+</div>
+
+<script>
+  // Elementos
+  const modal = document.getElementById("modalImagem");
+  const img = document.querySelector(".foto");
+  const imgExpandida = document.getElementById("imgExpandida");
+  const fechar = document.querySelector(".fechar");
+
+  // Ao clicar na imagem de perfil
+  img.onclick = function () {
+    modal.style.display = "flex";
+    imgExpandida.src = this.src;
+  }
+
+  // Ao clicar no X
+  fechar.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  // Ao clicar fora da imagem
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<script>
+  function toggleDarkMode() {
+    const body = document.body;
+    const isDark = body.classList.toggle("dark-mode");
+
+    // Guarda a preferência
+    localStorage.setItem("darkMode", isDark);
+  }
+
+ window.onload = () => {
+  const isDark = localStorage.getItem("darkMode") === "true";
+  const button = document.getElementById("darkModeToggle");
+
+  if (isDark) {
+    document.body.classList.add("dark-mode");
+    button.innerText = "☀️";
+  } else {
+    button.innerText = "🌙";
+  }
+}
+
+
+function myFunction(x) {
+  toggleDarkMode();
+
+  if (document.body.classList.contains("dark-mode")) {
+    x.innerText = "☀️"; // Mostra sol quando está em modo escuro
+  } else {
+    x.innerText = "🌙"; // Mostra lua quando está em modo claro
+  }
+}
+
+
+
+
+</script>
+
 
 
 </body>

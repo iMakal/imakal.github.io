@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bot Discord - Makal.exe</title>
   <link rel="stylesheet" href="website.css">
+  <link rel="icon" type="image/x-icon" href="boticon.png">
+
 </head>
 <body>
 
@@ -16,16 +18,20 @@
 
 
 <div class="intro">
-    <div class="texto">
-      <h1>Bot Discord - Makal.exe</h1>
-      <p>Bot criado com Python</p>
-    </div>
-    <img src="boticon.png" alt="Ícone" class="foto">
+  <a href="index.html"><button class="butaovoltar">Voltar</button></a>
+  
+  <div class="texto">
+    <h1>Bot Discord - Makal.exe</h1>
+    <p>Bot criado com Python</p>
   </div>
 
+  <img src="boticon.png" alt="Ícone" class="foto">
+</div>
+
+
 <div class="corpo">
-    <h3>Makal.exe</h3>
-    <p>Desenhado para diversos fins, seja entreternimento, utilidade ou diversão</p>
+    <h3>"Makal" é uma alcunha que tenho, e o Makal.exe é um bot com a minha personalidade.</h3>
+    <p>Desenhado para diversos fins, seja entreternimento ou utilidade </p>
     <br><br><br>
     <h5>Diversos comandos</h5>
     <p>!hora -> Hora local atual</p>
@@ -37,6 +43,48 @@
     <p>!meme -> Mostra um meme</p>
     <img src="bot3.png" alt="ping">
 </div>
+
+<!-- Modal para expandir imagem -->
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgExpandida">
+</div>
+
+<script>
+  // Elementos
+  const modal = document.getElementById("modalImagem");
+  const img = document.querySelector(".foto");
+  const imgExpandida = document.getElementById("imgExpandida");
+  const fechar = document.querySelector(".fechar");
+
+  // Ao clicar na imagem de perfil
+  img.onclick = function () {
+    modal.style.display = "flex";
+    imgExpandida.src = this.src;
+  }
+
+  // Ao clicar no X
+  fechar.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  // Ao clicar fora da imagem
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  const caixa = document.querySelector(".caixa-com-imagem");
+
+caixa.onclick = function () {
+  modal.style.display = "flex";
+  imgExpandida.src = getComputedStyle(this).backgroundImage.slice(5, -2); // extrai a URL
+};
+
+</script>
+
+
   
 </body>
 </html>
