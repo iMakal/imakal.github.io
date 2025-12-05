@@ -96,7 +96,18 @@ body {
   cursor: pointer; /* <-- este aqui */
 }
 
-
+.caixa-com-imagem-2 {
+  background-image: url('Banner2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer; /* <-- este aqui */
+}
 
 /* Header desliza de cima */
 .slide-in-top {
@@ -139,6 +150,19 @@ body {
 #projetos a:hover {
   text-decoration: underline; /* exemplo para hover */
 }
+
+
+.hiperligacoes {
+  color: rgb(71, 58, 255);
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none; /* opcional: remove o sublinhado */
+}
+
+.hiperligacoes:hover {
+  text-decoration: underline; /* exemplo para hover */
+}
+
 
 
 #contactos{
@@ -196,7 +220,7 @@ section {
 }
 
 .corpo{
-    background: white;
+    background: rgb(248, 231, 204);
 }
 
 /* Modal invisível por padrão */
@@ -263,4 +287,9 @@ footer{
 /* Se necessário, dá espaço lateral */
 .intro .butaovoltar {
   margin-right: 1rem;
+}
+/*Legenda imagens*/
+figcaption{
+  font-size:14px;
+  color:rgb(0, 0, 0);
 }

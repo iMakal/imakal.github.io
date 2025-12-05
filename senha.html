@@ -1,0 +1,113 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Discord - Makal.exe</title>
+  <link rel="stylesheet" href="website.css">
+  <link rel="icon" type="image/x-icon" href="keysymbol.png">
+
+</head>
+<body>
+
+    <div class="caixa-com-imagem-2">
+    </div>
+  
+  
+
+
+<div class="intro">
+  <a href="index.html"><button class="butaovoltar">Voltar</button></a>
+  
+  <div class="texto">
+    <h1>Gerador de Senhas para uso pessoal</h1>
+    <p>Gerador de senhas criado com Python</p>
+  </div>
+
+  <img src="keysymbol.png" alt="Ícone" class="foto">
+</div>
+
+
+<div class="corpo">
+    <h3>O gerador de senhas que facilita na criação de senhas fortes, longas e seguras.</h3>
+    <p>Desenhado para a criação de senhas fortes facilmente, com medidor de força, função de copiar senha e personalizar o tipo de senha.</p>
+    <p ><a href="https://github.com/iMakal/Gerador-de-Senhas" class="hiperligacoes" target="_blank">Visualize o projeto no GitHub</a></p>
+    <br><br><br>
+    <h3>O gerador de senhas, para a criação automatica de senhas. Deixe o programa fazer o trabalho dificil por você</h3>
+    <img src="Exemplo1.png" alt="Exemplo1">
+    <br><br>
+    
+    <p>Com a possibilidade de definir o tamanho e os tipos de caracteres, pode selecionar o tipo de senha que deseja.</p>
+    <img src="Exemplo3.png" alt="Exemplo3">
+    <br><br><br>
+    <p>Após selecionar as opções de caracteres e o tamanho desejado, é só clicar no botão "Gerar Senha" e o programa cria uma senha para si.</p>
+    <img src="Exemplo4.png" alt="Exemplo4">
+    <br><br><br>
+    <p>O medidor de força mostra o qual forte é a sua palavra-passe, utilizando métodos identicos mas não 100% realistas dos medidores de força que existem no mercado.</p>
+    <p>Pelo qual, não é recomendado a utilização do programa para sistemas que exigem muita segurança, como bancos, base de dados críticas, etc.</p>
+    
+    <img src="Senha1.png" alt="Senha1">
+    <img src="Senha2.png" alt="Senha2">
+    <br>
+    <img src="Senha3.png" alt="Senha3">
+    <img src="Senha4.png" alt="Senha4">
+    <figcaption>Diversos niveis do medidor de força</figcaption>
+    <br><br><br>
+    <img src="Exemplo2.png" alt="Exemplo2">
+</div>
+
+<!-- Modal para expandir imagem -->
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgExpandida">
+</div>
+
+<script>
+  // Elementos
+  const modal = document.getElementById("modalImagem");
+  const img = document.querySelector(".foto");
+  const imgExpandida = document.getElementById("imgExpandida");
+  const fechar = document.querySelector(".fechar");
+
+  // Ao clicar na imagem de perfil
+  img.onclick = function () {
+    modal.style.display = "flex";
+    imgExpandida.src = this.src;
+  }
+
+  // Ao clicar no X
+  fechar.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  // Ao clicar fora da imagem
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  const caixa = document.querySelector(".caixa-com-imagem-2");
+
+caixa.onclick = function () {
+  modal.style.display = "flex";
+  imgExpandida.src = getComputedStyle(this).backgroundImage.slice(5, -2); // extrai a URL
+};
+
+const imagensCorpo = document.querySelectorAll(".corpo img");
+
+imagensCorpo.forEach(img => {
+    img.onclick = function () {
+    modal.style.display = "flex";
+    imgExpandida.src = this.src;
+};
+});
+
+
+</script>
+
+
+  
+</body>
+</html>
