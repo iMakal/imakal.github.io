@@ -1,0 +1,509 @@
+/* ==========================================
+   1. VARIÁVEIS & RESET BASE
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.corpo {
+  background-color: rgb(248, 231, 204);
+}
+
+section {
+  padding: 2rem;
+}
+
+footer {
+  color: white;
+  background-color: black;
+}
+
+figcaption {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+/* ==========================================
+   2. NAVEGAÇÃO & LINKS
+   ========================================== */
+.hiperligacoes {
+  color: rgb(71, 58, 255);
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+}
+
+.hiperligacoes:hover,
+#contactos a:hover {
+  text-decoration: underline;
+}
+
+
+#contactos {
+  text-align: center;
+  color: white;
+  background-color: #E5383B;
+}
+
+#contactos a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ==========================================
+   3. COMPONENTES & BOTÕES
+   ========================================== */
+.butaovoltar {
+  background-color: #E5383B;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.butaovoltar:hover {
+  background-color: #410a0b;
+}
+
+.intro .butaovoltar {
+  margin-right: 1rem;
+}
+
+.butao {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #0c0c0c;
+  color: #fffdfd;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+
+#projetos .butao:hover{
+
+  transform: translateY(-2px);
+  background-color: #E5383B;
+  color: #ffffff;
+  border-color: #E5383B;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+#darkModeToggle {
+  background: black;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.2);
+  background: #555;
+}
+
+/* ==========================================
+   4. ESTRUTURA & BANNERS
+   ========================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(15, 15, 15, 0.85); /* Fundo escuro levemente transparente */
+  backdrop-filter: blur(8px); /* Dá aquele efeito de vidro desfocado moderno! */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #E5383B; /* O teu vermelho de destaque */
+}
+
+.nav-logo {
+  color: #ffffff; /* Ou #f3f4f6 para um cinzento bem clarinho */
+  font-weight: 700; /* Deixa em negrito para parecer um logo */
+}
+
+section, #sobremim, #habilidades, #projetos, #contactos{
+  scroll-margin-top: 90px;
+}
+
+.lang-select {
+  background-color: #1a1a1a;                  
+  color: #ffffff;                             
+  border: 1px solid rgba(255, 255, 255, 0.2);  
+  border-radius: 6px;                        
+  padding: 6px 10px;                         
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  min-width: 85px;                            
+}
+
+.lang-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.lang-select:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.lang-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+
+.intro {
+  color: white;
+  padding: 4 rem 2rem;
+  padding-top: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #0B090A, #E5383B);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 900px;
+  width: 100%;
+  margin: 0;
+
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+  url('../Assets/Fundo.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.caixa-com-imagem,
+.caixa-com-imagem-2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer; 
+}
+
+.caixa-com-imagem-index,
+.caixa-com-imagem-2-index,
+.caixa-com-imagem-3-index,
+.caixa-com-imagem-4-index {
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /*cursor: pointer; */
+}
+
+.caixa-com-imagem,
+.caixa-com-imagem-index {
+  background-image: url('../Assets/botwallpaper.png');
+}
+
+.caixa-com-imagem-2,
+.caixa-com-imagem-2-index {
+  background-image: url('../Assets/Banner2.png');
+}
+
+.caixa-com-imagem-3-index {
+  background-image: url('../Assets/Website_Cover.png');
+}
+
+.caixa-com-imagem-4-index {
+  background-image: url('../Assets/Fundo_Relogios_2.png');
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Layout em Coluna */
+.coluna {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.coluna section {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: white;
+  color: black;
+}
+
+/* Grid de Habilidades, Projetos & Badges */
+.habilidades-grid,
+.projeto-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+
+.habilidades-grid .skill-group {
+  flex: 1;
+  max-width: 400px;
+  min-width: 280px;
+}
+
+
+.projeto-grid .project-group {
+  /* flex: 1; */
+  flex: 1 1 calc(50% - 2rem);
+  max-width: 600px;
+  min-width: 280px;
+  border-radius: 15px;
+  background-color: #e6e6e6;
+  border : 1px solid #d1d5db;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-group,
+.project-group {
+  margin: 16px 0 16px 0;
+  padding-bottom: 3.5rem;
+  
+}
+
+.skill-group h4,
+.project-group h4 {
+  margin-bottom: 0.8rem;
+  color: #E5383B;
+}
+
+.project-group h4,
+.project-group p,
+.project-group .badges,
+.project-group .butao {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.project-group p {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.dark-mode .projeto-grid .project-group {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.badge {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  background-color: #E5383B;
+  color: white;
+  border-color: #E5383B;
+}
+
+/* ==========================================
+   5. MODAL
+   ========================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); 
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.fechar {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.fechar:hover {
+  color: #bbb;
+}
+
+/* ==========================================
+   6. ANIMAÇÕES
+   ========================================== */
+.slide-in-top {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   7. DARK MODE
+   ========================================== */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .coluna section {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode #contactos,
+.dark-mode footer {
+  background-color: #111;
+}
+
+.dark-mode footer {
+  color: #ccc;
+}
+
+.dark-mode #projetos a {
+  color: #90caf9;
+}
+
+.dark-mode #darkModeToggle {
+  background: #eee;
+  color: black;
+}
+
+.dark-mode .badge,
+body.dark-mode .badge {
+  background-color: #2b2b2b;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-mode .badge:hover,
+body.dark-mode .badge:hover {
+  background-color: #E5383B;
+  border-color: #E5383B;
+}

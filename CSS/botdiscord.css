@@ -1,0 +1,7 @@
+@import url('global.css');
+
+.nav-logo a {
+  color: #ff0000; 
+  font-weight: 700; 
+  text-decoration: none;
+}

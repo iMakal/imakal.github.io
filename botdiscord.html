@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Discord - Makal.exe</title>
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="stylesheet" href="CSS/botdiscord.css">
+  <link rel="icon" type="image/x-icon" href="Assets/boticon.png">
+
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo"><a href="index.html">Miguel Marques</a></div>
+  
+  <div class="nav-actions">
+      <select class="lang-select" onchange="changeLanguage(this.value)">
+      <option value="pt">🇵🇹 PT</option>
+      <option value="en">🇬🇧 EN</option>
+    </select>
+  </div>
+</nav>
+
+    <div class="caixa-com-imagem">
+    </div>
+  
+  
+
+
+<div class="intro">
+  <a href="index.html"><button class="butaovoltar">Voltar</button></a>
+  
+  <div class="texto">
+    <h1 data-i19n="Title">Bot Discord - Makal.exe</h1>
+    <p data-i19n="Subtitle">Bot criado com Python</p>
+  </div>
+
+  <img src="Assets/boticon.png" alt="Ícone" class="foto">
+</div>
+
+
+<div class="corpo">
+    <h3 data-i19n="Text1">'Makal' é uma alcunha que tenho, e o Makal.exe é um bot com a minha personalidade.</h3>
+    <p data-i19n="Text2">Desenho para diversos fins, seja entretenimento ou utilidade</p>
+    <br><br><br>
+    <h5 data-i19n="Text3">Diversos comandos</h5>
+    <p data-i19n="Text4">!hora -> Hora local atual</p>
+    <img src="Assets/bot1.png" alt="hora">
+    <br><br><br>
+    <p data-i19n="Text5">!ping -> Mostra latencia do bot</p>
+    <img src="Assets/bot2.png" alt="ping">
+    <br><br><br>
+    <p data-i19n="Text6">!meme -> Mostra um meme</p>
+    <img src="Assets/bot3.png" alt="ping">
+</div>
+
+<!-- Modal para expandir imagem -->
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgExpandida">
+</div>
+
+<script src="JS/botdiscord.js"></script>
+
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Marques - Portfólio </title>
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo">Miguel Marques</div>
+  <ul class="nav-links">
+  <li><a href="#sobremim" data-i18n="AboutMe">Sobre mim</a></li>
+  <li><a href="#habilidades" data-i18n="Skills">Skills</a></li>
+  <li><a href="#projetos" data-i18n="Projects">Projetos</a></li>
+  <li><a href="#contactos" data-i18n="Contacts">Contactos</a></li>
+</ul>
+  <div class="nav-actions">
+      <button onclick="myFunction(this)" id="darkModeToggle">🌙</button>
+
+      <select class="lang-select" onchange="changeLanguage(this.value)">
+      <option value="pt">🇵🇹 PT</option>
+      <option value="en">🇬🇧 EN</option>
+    </select>
+  </div>
+</nav>
+
+<header id="titulo" class="slide-in-top">
+  <div class="intro">
+    <div class="texto">
+      <h1 data-i18n="headerTitle">👋🙂 Olá, tudo bem? Eu sou o Miguel</h1>
+      <p data-i18n="headerSubtitle">Licenciado em engenharia informática</p>
+    </div>
+    
+    <img src="Assets/Foto.jpg" alt="Ícone" class="foto">
+    
+  </div>
+</header>
+
+
+<div class="coluna fade-in">
+  <section id="sobremim">
+    <h2 data-i18n="aboutTitle" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Sobre mim</h2>
+    <p data-i18n="aboutP1">Chamo-me Miguel Marques, licenciado em engenharia informatica, curso tirado no Politecnico de Viseu na Escola Superior de Gestão e Tecnologia de Viseu, entre 2021 até 2024.</p>
+    <p data-i18n="aboutP2">Tenho gosto por tecnologia, informática, programação, jogos e arte.</p>
+    <p data-i18n="aboutP3">Pretendo aprender mais sobre linguas de programação e criar projetos a parte para divertir-me enquanto melhoro as minhas habilidades técnicas.</p>
+  </section>
+</div>
+
+<div class="coluna fade-in">
+  <section id="habilidades" class="cartao">
+  <h2 data-i18n="skillsTitle">Habilidades</h2>
+  
+  <div class="habilidades-grid">
+    
+    <div class="skill-group">
+      <h4 data-i18n="skillssubtitle1">Linguagens</h4>
+      <div class="badges">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">C</span>
+        <span class="badge">C++</span>
+        <span class="badge">C#</span>
+        <span class="badge">Python</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">SQL</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4 data-i18n="skillssubtitle2">Tecnologias & Ferramentas</h4>
+      <div class="badges">
+        <span class="badge">VS Code</span>
+        <span class="badge">Packet Tracer</span>
+        <span class="badge">Arduino</span>
+        <span class="badge">PostgreSQL</span>
+        <span class="badge">Postman</span>
+        <span class="badge">Visual Studio</span>
+        <span class="badge">Windows Forms .NET Framework</span>
+        <span class="badge">Code Blocks</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<div class="coluna fade-in">
+  <section id="projetos" class="cartao">
+  <h2 data-i18n="projectTitle">Projetos</h2>
+  
+  <div class="projeto-grid">
+    
+    <div class="project-group">
+      <div class="caixa-com-imagem-index"></div>
+      <h4 data-i18n="projectsubtitle1">Makal.exe</h4>
+      <p data-i18n="description1">Um bot para a App Discord desenvolvido em Python para entretenimento</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">discord.py</span>
+      </div>
+      <a data-i18n="sabermais" href="botdiscord.html" class="butao">Saber mais</a>
+    </div>
+
+    <div class="project-group">
+      <div class="caixa-com-imagem-2-index"></div>
+      <h4 data-i18n="projectsubtitle2">Gerador de senhas</h4>
+      <p data-i18n="description2">Uma app feita em Python para facilitar a geração de senhas</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Tkinter</span>
+      </div>
+      <a data-i18n="sabermais" href="senha.html" class="butao">Saber mais</a>
+    </div>
+
+    <div class="project-group">
+      <div class="caixa-com-imagem-3-index"></div>
+      <h4 data-i18n="projectsubtitle3">Website Pessoal</h4>
+      <p data-i18n="description3">O website pessoal de Miguel Marques, no qual está a ver atualmente.</p>
+      <div class="badges">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+      </div>
+      <a data-i18n="sabermaisgithub" href="https://github.com/iMakal/imakal.github.io" target="_blank" class="butao">Saber mais (Github)</a>
+    </div>
+
+    <div class="project-group">
+      <div class="caixa-com-imagem-4-index"></div>
+      <h4 data-i18n="projectsubtitle4">Os rélogios (em desenvolvimento)</h4>
+      <p data-i18n="description4">O website que permite ver as horas de diferentes países</p>
+      <div class="badges">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">API</span>
+      </div>
+      <!--<a data-i18n="sabermais" href="https://github.com/iMakal/imakal.github.io" target="_blank" class="butao">Saber mais (Github)</a>-->
+    </div>
+
+
+    
+    
+
+  </div>
+</section>
+</div>
+
+
+
+
+<div id="contactos" class="fade-in">
+  <h2 data-i18n="contactsTitle">Contactos</h2>
+  <p>Email: <a href="mailto:miguelpmarques2602@gmail.com">miguelpmarques2602@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/iMakal" target="_blank">IMakal</a></p>
+</div>
+
+<footer>
+  <p data-i18n="footer">Criado por Miguel Marques. Publicado com GitHub.</p>
+</footer>
+
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgExpandida">
+</div>
+
+<script src="JS/index.js"></script>
+  
+
+
+
+
+</body>
+</html>

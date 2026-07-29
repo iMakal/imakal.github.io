@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Discord - Makal.exe</title>
+  <link rel="stylesheet" href="CSS/website.css">
+  <link rel="stylesheet" href="CSS/senha.css">
+  <link rel="icon" type="image/x-icon" href="Assets/keysymbol.png">
+
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo"><a href="index.html">Miguel Marques</a></div>
+  
+  <div class="nav-actions">
+      <select class="lang-select" onchange="changeLanguage(this.value)">
+      <option value="pt">🇵🇹 PT</option>
+      <option value="en">🇬🇧 EN</option>
+    </select>
+  </div>
+</nav>
+
+    <div class="caixa-com-imagem-2">
+    </div>
+  
+  
+
+
+<div class="intro">
+  <a href="index.html"><button class="butaovoltar">Voltar</button></a>
+  
+  <div class="texto">
+    <h1 data-i20n="Title">Gerador de Senhas para uso pessoal</h1>
+    <p data-i20n="Subtitle">Gerador de senhas criado com Python</p>
+  </div>
+
+  <img src="Assets/keysymbol.png" alt="Ícone" class="foto">
+</div>
+
+
+<div class="corpo">
+    <h3 data-i20n="Text1">O gerador de senhas que facilita na criação de senhas fortes, longas e seguras.</h3>
+    <p data-i20n="Text2">Desenhado para a criação de senhas fortes facilmente, com medidor de força, função de copiar senha e personalizar o tipo de senha.</p>
+    <p ><a href="https://github.com/iMakal/Gerador-de-Senhas" data-i20n="Text3" class="hiperligacoes" target="_blank">Visualize o projeto no GitHub</a></p>
+    <br><br><br>
+    <h3 data-i20n="Text4">O gerador de senhas, para a criação automatica de senhas. Deixe o programa fazer o trabalho dificil por você</h3>
+    <img src="Assets/Exemplo1.png" alt="Exemplo1">
+    <br><br>
+    
+    <p data-i20n="Text5">Com a possibilidade de definir o tamanho e os tipos de caracteres, pode selecionar o tipo de senha que deseja.</p>
+    <img src="Assets/Exemplo3.png" alt="Exemplo3">
+    <br><br><br>
+    <p data-i20n="Text6">Após selecionar as opções de caracteres e o tamanho desejado, é só clicar no botão "Gerar Senha" e o programa cria uma senha para si.</p>
+    <img src="Assets/Exemplo4.png" alt="Exemplo4">
+    <br><br><br>
+    <p data-i20n="Text7">O medidor de força mostra o qual forte é a sua palavra-passe, utilizando métodos identicos mas não 100% realistas dos medidores de força que existem no mercado.</p>
+    <p data-i20n="Text8">Pelo qual, não é recomendado a utilização do programa para sistemas que exigem muita segurança, como bancos, base de dados críticas, etc.</p>
+    
+    <img src="Assets/Senha1.png" alt="Senha1">
+    <img src="Assets/Senha2.png" alt="Senha2">
+    <br>
+    <img src="Assets/Senha3.png" alt="Senha3">
+    <img src="Assets/Senha4.png" alt="Senha4">
+    <figcaption data-i20n="caption">Diversos niveis do medidor de força</figcaption>
+    <br><br><br>
+    <img src="Assets/Exemplo2.png" alt="Exemplo2">
+</div>
+
+<!-- Modal para expandir imagem -->
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgExpandida">
+</div>
+
+<script src="JS/senha.js">
+ 
+
+</script>
+
+
+  
+</body>
+</html>
