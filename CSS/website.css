@@ -148,8 +148,8 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(15, 15, 15, 0.85); /* Fundo escuro levemente transparente */
-  backdrop-filter: blur(8px); /* Dá aquele efeito de vidro desfocado moderno! */
+  background-color: rgba(15, 15, 15, 0.85); 
+  backdrop-filter: blur(8px); 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -167,12 +167,12 @@ figcaption {
 }
 
 .nav-links a:hover {
-  color: #E5383B; /* O teu vermelho de destaque */
+  color: #E5383B; 
 }
 
 .nav-logo {
-  color: #ffffff; /* Ou #f3f4f6 para um cinzento bem clarinho */
-  font-weight: 700; /* Deixa em negrito para parecer um logo */
+  color: #ffffff; 
+  font-weight: 700; 
 }
 
 section, #sobremim, #habilidades, #projetos, #contactos{

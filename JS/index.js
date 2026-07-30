@@ -149,4 +149,8 @@ function changeLanguage(lang) {
 window.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("preferredLanguage") || "pt";
   changeLanguage(savedLang);
+  const langSelect = document.getElementById("languageSelect");
+  if (langSelect) {
+    langSelect.value = savedLang;
+  }
 });
